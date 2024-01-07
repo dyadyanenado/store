@@ -1,0 +1,104 @@
+.header {
+    display: flex;
+    align-items: center;
+    max-height: 60px;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 35%;  /* костыль чтобы было по центру */
+}
+
+.icons {
+    display: flex;
+    margin-left: auto;
+}
+
+.icons > img {
+    max-width: 30px;
+    max-height: 30px;
+    padding: 15px;
+}
+
+.categories > div {
+    display: flex;
+}
+
+.categories button {
+    min-width: 50%; /* переделать на части */
+    border: none;
+    background-color: #e3dddc;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    padding: 10px;
+}
+
+
+.categories button.selected:hover {
+    font-weight: 700;
+    background-color: #d6af45;
+}
+
+.subcategories > button {
+    display: none;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.card {
+    position: relative;
+    display: block;
+    max-width: 24%;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.card  img {
+    object-fit: contain; 
+    width: 100%; 
+    height: 100%;
+}
+
+.card-info {
+    padding: 10px 20px; 
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.price-line {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.price-line > img {
+    max-width: 20px;
+    display: block;
+}
+
+.desc {
+    margin: 0;
+}
+
+
+
+
+
+
+footer {
+    min-height: 400px;
+}

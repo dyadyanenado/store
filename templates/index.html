@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Store</title>
+</head>
+<body>
+    <header class="header">
+        <p class="title">abobus</p>
+        <div>
+            <div class="icons">
+                <img class="man" src="{{ url_for('static', filename='images/icons/man.png') }}" alt="man">
+                <img class="heart" src="{{ url_for('static', filename='images/icons/heart.png') }}" alt="heart">
+                <img class="bag" src="{{ url_for('static', filename='images/icons/bag.png') }}" alt="bag">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="categories">
+            <div class="gender">
+                <button class="selected female">Женское</button>
+                <button class="male">Мужское</button>
+            </div>
+            <div class="subcategories">
+                <button>Обувь</button>
+                <button>Верхняя одежда</button>
+            </div>
+        </div>
+        <div class="cards">
+            {% for product in products %}
+                <div class="card">
+                    <div>
+                        <img src="{{ url_for('static', filename=product.image_filename) }}" alt="карточка 1">
+                        <div class="card-info">
+                            <div class="price-line">
+                                <p class="price">{{ product.price }} ₽</p>
+                                <img class="on-heart" src="{{ url_for('static', filename='images/icons/heart.png') }}" alt="">
+                            </div>
+                            <p class="desc">{{ product.name }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+    <footer>Abobus sponsor</footer>
+    <script src="./main.js"></script>
+</body>
+</html>
